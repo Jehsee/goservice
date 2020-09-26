@@ -16,12 +16,10 @@ func main() {
 
 	// create the handlers
 	ph := handlers.NewProducts(l)
-	gh := handlers.NewGoodbye(l)
 
 	// create a new serve mux and register the handlers
 	sm := http.NewServeMux()
 	sm.Handle("/", ph)
-	sm.Handle("/goodbye", gh)
 
 	// create a new server
 	s := &http.Server{

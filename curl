@@ -1,1 +1,7 @@
-curl -vso /dev/null http://localhost:8000 -d "Hwang"
+GET  http://localhost:8000 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "tea",
+    "description": "a nice cup of tea"
+}
